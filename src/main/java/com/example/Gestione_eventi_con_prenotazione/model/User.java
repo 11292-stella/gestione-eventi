@@ -17,7 +17,7 @@ import java.util.List;
 @Table(name = "users")
 public class User implements UserDetails {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // Use IDENTITY for auto-increment
+    @GeneratedValue(strategy = GenerationType.IDENTITY) 
     private int id;
     private String nome;
     private String cognome;
