@@ -32,7 +32,7 @@ public class AuthController {
         if (bindingResult.hasErrors()) {
             String errorMessage = bindingResult.getAllErrors().stream()
                     .map(objectError -> objectError.getDefaultMessage())
-                    .reduce("", (s, e) -> s + e + " "); // Added space for readability
+                    .reduce("", (s, e) -> s + e + " "); 
             throw new ValidationException(errorMessage.trim());
         }
         return userService.saveUser(userDto);
@@ -43,7 +43,7 @@ public class AuthController {
         if (bindingResult.hasErrors()) {
             String errorMessage = bindingResult.getAllErrors().stream()
                     .map(objectError -> objectError.getDefaultMessage())
-                    .reduce("", (s, e) -> s + e + " "); // Added space for readability
+                    .reduce("", (s, e) -> s + e + " "); 
             throw new ValidationException(errorMessage.trim());
         }
         return authService.login(loginDto);
